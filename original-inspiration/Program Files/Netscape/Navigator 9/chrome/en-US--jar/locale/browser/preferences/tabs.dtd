@@ -1,0 +1,40 @@
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%brandDTD;
+
+<!ENTITY openBehavior.caption             "Open New Page">
+<!ENTITY openBehaviorBookmarks.label      "Bookmarks, history, etc...:">
+<!ENTITY openBehaviorBookmarks.accesskey  "B">
+<!ENTITY openBehaviorSearch.label         "Search box:">
+<!ENTITY openBehaviorSearch.accesskey     "S">
+<!ENTITY openBehaviorDiverted.label       "External program or diverted page:">
+<!ENTITY openBehaviorDiverted.accesskey   "E">
+<!ENTITY openBehaviorActive.label         "Active tab">
+<!ENTITY openBehaviorWindow.label         "New window">
+<!ENTITY openBehaviorTab.label            "New tab">
+
+<!ENTITY tabbedBrowsing.caption           "Tabbed Browsing">
+<!ENTITY showTabBar.label                 "Always show the tab bar">
+<!ENTITY showTabBar.accesskey             "A">
+<!ENTITY showCloseButton.label            "Show the close button on:">
+<!ENTITY showCloseButton.accesskey        "c">
+<!ENTITY showCloseButtonNone.label        "None">
+<!ENTITY showCloseButtonActive.label      "Active tab">
+<!ENTITY showCloseButtonAll.label         "All tabs">
+<!ENTITY loadOnNewTab.label               "When a new tab is created open with:">
+<!ENTITY loadOnNewTab.accesskey           "n">
+<!ENTITY loadOnNewTabBlank.label          "Blank page">
+<!ENTITY loadOnNewTabHome.label           "Home page">
+<!ENTITY loadOnNewTabCurrent.label        "Current page">
+<!ENTITY switchUI.label                   "Switch to new tab when opened from bookmarks, history, etc...">
+<!ENTITY switchUI.accesskey               "h">
+<!ENTITY switchContent.label              "Switch to new tab when opened from a page">
+<!ENTITY switchContent.accesskey          "p">
+<!ENTITY switchDiverted.label             "Switch to new tab when opened from an external program or diverted page">
+<!ENTITY switchDiverted.accesskey         "x">
+
+<!ENTITY warningMessages.caption          "Warning Messages">
+<!ENTITY warnCloseMultipleTabs.label      "Warn me when closing multiple tabs">
+<!ENTITY warnCloseMultipleTabs.accesskey  "m">
+<!ENTITY warnOpenManyTabs.label           "Warn me when opening multiple tabs might slow down &brandShortName;">
+<!ENTITY warnOpenManyTabs.accesskey       "u">
+

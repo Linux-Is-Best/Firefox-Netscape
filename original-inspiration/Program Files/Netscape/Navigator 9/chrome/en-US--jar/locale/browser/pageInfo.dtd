@@ -1,0 +1,86 @@
+<!--
+-->
+
+<!ENTITY  preface               "Info for: "> 
+
+<!ENTITY  title                 "Page Info"> 
+<!ENTITY  description           "Information about the current page"> 
+<!ENTITY  pageInfoWindow.width  "425">
+<!ENTITY  pageInfoWindow.height "470">
+
+<!ENTITY  copy.key              "C">
+<!ENTITY  copy.label            "Copy">
+<!ENTITY  copy.accesskey        "C">
+<!ENTITY  selectall.key         "A">
+<!ENTITY  selectall.label       "Select All">
+<!ENTITY  selectall.accesskey   "A">
+<!ENTITY  closeWindow.key       "w">
+
+<!ENTITY  generalTab            "General">
+<!ENTITY  generalAccesskey      "G">
+<!ENTITY  generalTitle          "Title:">
+<!ENTITY  generalURL            "Address:">
+<!ENTITY  generalMode           "Render Mode:">
+<!ENTITY  generalType           "Type:">
+<!ENTITY  generalSize           "Size:">
+<!ENTITY  generalReferrer       "Referring URL:">
+<!ENTITY  generalSource         "Cache Source:">
+<!ENTITY  generalSent           "Sent:">
+<!ENTITY  generalModified       "Modified:">
+<!ENTITY  generalExpires        "Expires:">
+<!ENTITY  generalEncoding       "Encoding:">
+<!ENTITY  generalMeta           "Meta:">
+<!ENTITY  generalMetaName       "Name">
+<!ENTITY  generalMetaContent    "Content">
+
+<!ENTITY  formsTab              "Forms">
+<!ENTITY  formsAccesskey        "F">
+<!ENTITY  formAction            "Form Action">
+<!ENTITY  formMethod            "Method">
+<!ENTITY  formName              "Name">
+<!ENTITY  formNo                "No.">
+<!ENTITY  formEncoding          "Encoding:">
+<!ENTITY  formTarget            "Target:">
+<!ENTITY  formFields            "Fields:">
+<!ENTITY  formLabel             "Label">
+<!ENTITY  formFName             "Field Name">
+<!ENTITY  formType              "Type">
+<!ENTITY  formCValue            "Current Value">
+
+<!ENTITY  linksTab              "Links">
+<!ENTITY  linksAccesskey        "L">
+<!ENTITY  linkNo                "No.">
+<!ENTITY  linkName              "Name">
+<!ENTITY  linkAddress           "Address">
+<!ENTITY  linkType              "Type">
+<!ENTITY  linkTarget            "Target">
+<!ENTITY  linkAccessKey         "Access Key">
+
+<!ENTITY  mediaTab              "Media">
+<!ENTITY  mediaAccesskey        "M">
+<!ENTITY  mediaHeader           "Images on this page">
+<!ENTITY  mediaURL              "Address:">
+<!ENTITY  mediaBase             "Base Address:">
+<!ENTITY  mediaAlt              "Alternate Text:">
+<!ENTITY  mediaAltHeader        "Alternate Text">
+<!ENTITY  mediaNo               "No.">
+<!ENTITY  mediaName             "Name">
+<!ENTITY  mediaAddress          "Address">
+<!ENTITY  mediaType             "Type">
+<!ENTITY  mediaCount            "Count">
+<!ENTITY  mediaPlugin           "Plugin:">
+<!ENTITY  mediaCharset          "Encoding:">
+<!ENTITY  mediaDimensions       "Specified Dimensions:">
+<!ENTITY  mediaPhysDimensions   "Actual Dimensions:">
+<!ENTITY  mediaEncryption       "Encryption:">
+<!ENTITY  mediaTitle            "Title:">
+<!ENTITY  mediaLongdesc         "Long Description:">
+<!ENTITY  mediaSaveAs           "Save As...">
+<!ENTITY  mediaSaveAs.accesskey "S">
+<!ENTITY  mediaPreview          "Media Preview:">
+
+<!ENTITY  framesTab             "Frames">
+<!ENTITY  framesTab.accesskey   "r">
+<!ENTITY  frameName             "Name">
+<!ENTITY  frameAddress          "Address">
+<!ENTITY  frameType             "Type">

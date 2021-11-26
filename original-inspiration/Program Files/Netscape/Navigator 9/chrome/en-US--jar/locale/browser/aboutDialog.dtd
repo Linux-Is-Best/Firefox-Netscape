@@ -1,0 +1,8 @@
+<!ENTITY aboutDialog.title      "About &brandFullName;">
+<!ENTITY copyright              "Credits">
+<!ENTITY aboutLink              "&lt; About &brandFullName;">
+<!ENTITY aboutVersion           "version">
+<!ENTITY copyrightText          "&#169; Netscape Communications Corporation. All rights reserved. Portions &#169; 
+				 1998-2008 Contributors to the Mozilla Foundation.  All rights reserved.  Netscape 
+				and the Netscape logo are registered trademarks of Netscape Communications Corporation.">
+<!ENTITY cmdClose.macKey        "W">

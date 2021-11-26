@@ -1,0 +1,38 @@
+<!-- Global Entities -->
+<!ENTITY linkpad.shortName                         "Link Pad">
+<!ENTITY linkpad.fullName                          "Netscape Link Pad">
+
+<!-- Browser Overlay -->
+<!ENTITY linkpad.overlay.label                     "&linkpad.shortName;">
+<!ENTITY linkpad.overlay.title                     "&linkpad.shortName;">
+<!ENTITY linkpad.overlay.tooltip                   "Toggle &linkpad.shortName;">
+<!ENTITY linkpad.overlay.accesskey                 "L">
+<!ENTITY linkpad.overlay.commandkey                "L">
+<!ENTITY linkpad.overlay.drop                      "Drop a link to add it to the &linkpad.shortName;">
+
+<!-- Sidebar Panel -->
+<!ENTITY linkpad.panel.open.label                  "Open">
+<!ENTITY linkpad.panel.open.accesskey              "O">
+<!ENTITY linkpad.panel.openWin.label               "Open in New Window">
+<!ENTITY linkpad.panel.openWin.accesskey           "N">
+<!ENTITY linkpad.panel.openTab.label               "Open in New Tab">
+<!ENTITY linkpad.panel.openTab.accesskey           "w">
+<!ENTITY linkpad.panel.openSidebar.label           "Open in Sidebar">
+<!ENTITY linkpad.panel.openSidebar.accesskey       "S">
+<!ENTITY linkpad.panel.clear.label                 "Delete All">
+<!ENTITY linkpad.panel.clear.accesskey             "A">
+
+<!-- Preference Dialog -->
+<!ENTITY linkpad.prefs.title                       "&linkpad.shortName;">
+<!ENTITY linkpad.prefs.links.caption               "Links">
+<!ENTITY linkpad.prefs.links.click.label           "Open with a:">
+<!ENTITY linkpad.prefs.links.click.accesskey       "p">
+<!ENTITY linkpad.prefs.links.click.single          "Single click">
+<!ENTITY linkpad.prefs.links.click.double          "Double click">
+<!ENTITY linkpad.prefs.links.remove.label          "Remove when opened">
+<!ENTITY linkpad.prefs.links.remove.accesskey      "R">
+<!ENTITY linkpad.prefs.dialogs.caption             "Warning Messages">
+<!ENTITY linkpad.prefs.dialogs.clear.label         "Show a warning when deleting all items">
+<!ENTITY linkpad.prefs.dialogs.clear.accesskey     "d">
+<!ENTITY linkpad.prefs.database.compact.label      "Compact">
+<!ENTITY linkpad.prefs.database.compact.accesskey  "C">
