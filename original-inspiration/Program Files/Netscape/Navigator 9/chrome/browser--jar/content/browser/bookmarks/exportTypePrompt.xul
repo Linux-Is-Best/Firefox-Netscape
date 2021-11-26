@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<dialog
+	title="Export Bookmarks"
+	buttons="accept,cancel"
+	orient="vertical"
+	style="max-width: 40em;"
+	onload="window.sizeToContent();"
+	ondialogaccept="acceptDialog();"
+	xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	<vbox>
+		<label value="In what format would you like to export your bookmarks?" for="type"/>
+		<radiogroup id="export-type">
+			<radio id="export-html" label="HTML (standard)" selected="true"/>
+			<description>
+				Choose this option if you are exporting your bookmarks in order to import them into another browser, share them on the Web, or save a backup.
+			</description>
+			<radio id="export-opml" label="OPML" />
+			<description>
+				OPML is an XML format used to share outline structures.  Choose this option if you are exporting your bookmarks or newsfeeds in order to import them into a feed reader.
+			</description>
+		</radiogroup>
+	</vbox>
+	<script type="application/x-javascript">
+		<![CDATA[
+		
+		function acceptDialog() {
+			if (document.getElementById("export-html").selected){
+				window.opener.goDoCommand('cmd_bm_export');
+			}
+			else {
+				window.opener.goDoCommand('cmd_bm_exportopml');
+			}
+
+			window.close();
+		}
+		
+		]]>
+	</script>
+</dialog>

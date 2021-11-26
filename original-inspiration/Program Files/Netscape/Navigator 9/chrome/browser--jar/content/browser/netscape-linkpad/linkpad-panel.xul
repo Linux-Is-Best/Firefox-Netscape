@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE page SYSTEM "chrome://browser/locale/netscape-linkpad/linkpad.dtd">
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/netscape-linkpad/linkpad.css" type="text/css"?>
+<?xul-overlay href="chrome://global/content/editMenuOverlay.xul"?>
+
+<page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+      id="linkpad_panel"
+      windowtype="linkpad:panel"
+      onload="LinkpadPanel.onLoad();"
+      onunload="LinkpadPanel.onUnload();">
+
+  <script type="application/x-javascript" src="chrome://global/content/globalOverlay.js"/>
+  <script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>
+  <script type="application/x-javascript" src="chrome://global/content/contentAreaUtils.js"/> 
+  <script type="application/x-javascript" src="chrome://global/content/nsDragAndDrop.js"/>
+  <script type="application/x-javascript" src="chrome://browser/content/netscape-linkpad/linkpad-utils.js"></script>  
+  <script type="application/x-javascript" src="chrome://browser/content/netscape-linkpad/linkpad-panel.js"></script>
+  
+  <stringbundleset id="mainStringbundleSet">
+    <stringbundle id="linkpad_bundle" src="chrome://browser/locale/netscape-linkpad/linkpad.properties"/>
+  </stringbundleset>
+
+  <commandset id="editMenuCommands"/>   
+  <commandset id="mainCommandSet">
+    <command id="linkpad_open" oncommand="goDoCommand('linkpad_open');"/>
+    <command id="linkpad_openWin" oncommand="goDoCommand('linkpad_openWin');"/>
+    <command id="linkpad_openTab" oncommand="goDoCommand('linkpad_openTab');"/>
+    <command id="linkpad_openSidebar" oncommand="goDoCommand('linkpad_openSidebar');"/>    
+    <command id="linkpad_clear" oncommand="goDoCommand('linkpad_clear');"/>
+  </commandset>
+  
+  <keyset id="editMenuKeys"/>
+     
+  <popupset id="mainPopupSet">
+    <menupopup id="linkpad_context"
+               onpopupshowing="return LinkpadPanel.buildContextMenu(event);">
+      <menuitem id="cMenu_open" command="linkpad_open" default="true"
+                label="&linkpad.panel.open.label;"
+                accesskey="&linkpad.panel.open.accesskey;"/>   
+      <menuitem id="cMenu_openWin" command="linkpad_openWin"
+                label="&linkpad.panel.openWin.label;"
+                accesskey="&linkpad.panel.openWin.accesskey;"/> 
+      <menuitem id="cMenu_openTab" command="linkpad_openTab"
+                label="&linkpad.panel.openTab.label;"
+                accesskey="&linkpad.panel.openTab.accesskey;"/> 
+      <menuitem id="cMenu_openSidebar" command="linkpad_openSidebar"
+                label="&linkpad.panel.openSidebar.label;"
+                accesskey="&linkpad.panel.openSidebar.accesskey;"/>                
+      <menuseparator/>
+      <menuitem id="cMenu_cut"/>
+      <menuitem id="cMenu_copy"/>
+      <menuitem id="cMenu_paste"/>
+      <menuseparator/>            
+      <menuitem id="cMenu_delete"/>
+      <menuitem id="cMenu_clear" command="linkpad_clear"
+                label="&linkpad.panel.clear.label;"
+                accesskey="&linkpad.panel.clear.accesskey;"/>
+    </menupopup>             
+
+  </popupset>
+    
+  <listbox id="linkpad_listbox"  flex="1" class="plain" seltype="single" 
+        context="linkpad_context"           
+        onselect="goOnEvent(this, 'select');"
+        onfocus="goOnEvent(this, 'focus');"      
+        onkeypress="if (event.keyCode == 13) goDoCommand('linkpad_open');"
+        onclick="LinkpadPanel.checkClick(event, 1);"
+        ondblclick="LinkpadPanel.checkClick(event, 2);"         
+        ondraggesture="nsDragAndDrop.startDrag(event, LinkpadPanel);"  
+        ondragenter="nsDragAndDrop.dragEnter(event, LinkpadPanel);"                         
+        ondragover="nsDragAndDrop.dragOver(event, LinkpadPanel);"
+        ondragexit="nsDragAndDrop.dragExit(event, LinkpadPanel);"                   
+        ondragdrop="nsDragAndDrop.drop(event, LinkpadPanel);">     
+  </listbox>
+</page>  
