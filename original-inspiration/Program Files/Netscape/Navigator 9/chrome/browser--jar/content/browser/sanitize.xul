@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE prefwindow [
+  <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+  <!ENTITY % sanitizeDTD SYSTEM "chrome://browser/locale/sanitize.dtd">
+  %brandDTD;
+  %sanitizeDTD;
+]>
+
+<prefwindow id="SanitizeDialog" type="child"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            dlgbuttons="accept,cancel"
+            title="&sanitizeDialog.title;"
+            style="width: 30em !important;"
+            ondialogaccept="gSanitizePromptDialog.sanitize();">
+
+  <prefpane id="SanitizeDialogPane" onpaneload="gSanitizePromptDialog.init();">
+    <stringbundle id="bundleBrowser" src="chrome://browser/locale/browser.properties"/>
+    
+    <script type="application/x-javascript" src="chrome://browser/content/sanitize.js"/>
+    <script type="application/x-javascript">
+    <![CDATA[
+      var gSanitizePromptDialog = {
+        init: function ()
+        {
+          var s = new Sanitizer();
+          var sanitizePreferences = document.getElementById("sanitizePreferences");
+          for (var i = 0; i < sanitizePreferences.childNodes.length; ++i) {
+            var preference = sanitizePreferences.childNodes[i];
+            var name = s.getNameFromPreference(preference.name);
+            if (!s.canClearItem(name)) 
+              preference.disabled = true;
+          }
+          
+          var bundleBrowser = document.getElementById("bundleBrowser");
+          document.documentElement.getButton("accept").label = bundleBrowser.getString("sanitizeButton");
+        },
+      
+        sanitize: function ()
+        {
+          var s = new Sanitizer();
+          var sanitizePreferences = document.getElementById("sanitizePreferences");
+          var preference, name;
+          for (var i = 0; i < sanitizePreferences.childNodes.length; ++i) {
+            preference = sanitizePreferences.childNodes[i];
+            if (preference.value) {
+              name = s.getNameFromPreference(preference.name);
+              try {
+                s.clearItem(name);
+              } catch(er) {
+                dump(er + " sanitizing " + name); 
+                // TODO: give user feedback about partially failed sanitization
+              }
+            }
+          }
+        },
+        
+        onReadGeneric: function ()
+        {
+          var preferences = document.getElementById("sanitizePreferences");
+          var found = false;
+          for (var i = 0; i < preferences.childNodes.length; ++i) {
+            var preference = preferences.childNodes[i];
+            if (preference.value && !preference.disabled) {
+              found = true;
+              break;
+            }
+          }
+          try {
+            document.documentElement.getButton("accept").disabled = !found;
+          }
+          catch (e) { }
+          return undefined;
+        }
+      };
+    ]]>
+    </script>
+
+    <preferences id="sanitizePreferences">
+      <preference id="privacy.item.history"               name="privacy.item.history"               type="bool" readonly="true"/>
+      <preference id="privacy.item.formdata"              name="privacy.item.formdata"              type="bool" readonly="true"/>
+      <preference id="privacy.item.passwords"             name="privacy.item.passwords"             type="bool" readonly="true"/>
+      <preference id="privacy.item.downloads"             name="privacy.item.downloads"             type="bool" readonly="true"/>
+      <preference id="privacy.item.cookies"               name="privacy.item.cookies"               type="bool" readonly="true"/>
+      <preference id="privacy.item.cache"                 name="privacy.item.cache"                 type="bool" readonly="true"/>
+      <preference id="privacy.item.sessions"              name="privacy.item.sessions"              type="bool" readonly="true"/>
+      <preference id="privacy.item.linkpad"               name="privacy.item.linkpad"               type="bool" readonly="true"/>
+    </preferences>
+
+    <description>&sanitizeItems.label;</description>
+
+    <checkbox label="&itemHistory.label;"
+              accesskey="&itemHistory.accesskey;"
+              preference="privacy.item.history"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemDownloads.label;"
+              accesskey="&itemDownloads.accesskey;"
+              preference="privacy.item.downloads"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemFormSearchHistory.label;"
+              accesskey="&itemFormSearchHistory.accesskey;"
+              preference="privacy.item.formdata"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemCache.label;"
+              accesskey="&itemCache.accesskey;"
+              preference="privacy.item.cache"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemCookies.label;"
+              accesskey="&itemCookies.accesskey;"
+              preference="privacy.item.cookies"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemPasswords.label;"
+              accesskey="&itemPasswords.accesskey;"
+              preference="privacy.item.passwords"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemSessions.label;"
+              accesskey="&itemSessions.accesskey;"
+              preference="privacy.item.sessions"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+    <checkbox label="&itemLinkpad.label;"
+              accesskey="&itemLinkpad.accesskey;"
+              preference="privacy.item.linkpad"
+              onsyncfrompreference="return gSanitizePromptDialog.onReadGeneric();"/>
+  </prefpane>
+</prefwindow>

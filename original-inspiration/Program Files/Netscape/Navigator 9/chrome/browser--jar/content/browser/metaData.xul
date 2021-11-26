@@ -1,0 +1,189 @@
+<?xml version="1.0"?> 
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="chrome://browser/skin/pageInfo.css" type="text/css"?>
+<?xul-overlay href="chrome://global/content/dialogOverlay.xul"?>
+
+<!DOCTYPE window SYSTEM "chrome://browser/locale/metaData.dtd" >
+ 
+<window id="metadata"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&caption.label;"
+        onload="onLoad()"
+        class="dialog"
+        minwidth="350"
+        persist="screenX screenY"
+        screenX="24" screenY="24">
+
+  <script type="application/x-javascript" src="chrome://browser/content/metaData.js"/>
+
+  <keyset id="dialogKeys"/>
+
+  <stringbundle src="chrome://browser/locale/metaData.properties" id="bundle_metadata"/>
+  <stringbundle src="chrome://global/locale/languageNames.properties" id="bundle_languages"/>
+  <stringbundle src="chrome://global/locale/regionNames.properties" id="bundle_regions"/>
+
+  <label id="no-properties" value="&no-properties.label;"/>
+  
+  <vbox id="link-sec">
+    <label value="&link-sec.label;"/>
+    <separator class="groove"/>
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows>
+        <row id="link-url">
+          <separator orient="vertical"/>
+          <label value="&link-url.label; "/>
+          <textbox readonly="true" id="link-url-text"/>
+        </row>
+        <row id="link-target">
+          <separator orient="vertical"/>
+          <label value="&link-target.label; "/>
+          <textbox readonly="true" id="link-target-text"/>
+        </row>
+        <row id="link-type">
+          <separator orient="vertical"/>
+          <label value="&link-type.label; "/>
+          <textbox readonly="true" id="link-type-text"/>
+        </row>
+        <row id="link-lang">
+          <separator orient="vertical"/>
+          <label value="&link-lang.label; "/>
+          <textbox readonly="true" id="link-lang-text"/>
+        </row>
+        <row id="link-rel">
+          <separator orient="vertical"/>
+          <label value="&link-rel.label; "/>
+          <textbox readonly="true" id="link-rel-text"/>
+        </row>
+        <row id="link-rev">
+          <separator orient="vertical"/>
+          <label value="&link-rev.label; "/>
+          <textbox readonly="true" id="link-rev-text"/>
+        </row>
+      </rows>
+    </grid>
+    <separator/>
+  </vbox>
+  <vbox id="image-sec">
+    <label value="&image-sec.label;"/>
+    <separator class="groove"/>
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows>
+        <row id="image-url">
+          <separator orient="vertical"/>
+          <label value="&image-url.label; "/>
+          <textbox readonly="true" id="image-url-text"/>
+        </row>
+        <row id="image-width">
+          <separator orient="vertical"/>
+          <label value="&image-width.label; "/>
+          <textbox readonly="true" id="image-width-text"/>
+        </row>
+        <row id="image-height">
+          <separator orient="vertical"/>
+          <label value="&image-height.label; "/>
+          <textbox readonly="true" id="image-height-text"/>
+        </row>
+	<row id="image-filesize">
+          <separator orient="vertical"/>
+          <label value="&image-filesize.label; "/>
+          <textbox readonly="true" id="image-filesize-text"/>
+	</row>
+        <row id="image-alt">
+          <separator orient="vertical"/>
+          <label value="&image-alt.label; "/>
+          <textbox readonly="true" id="image-alt-text"/>
+        </row>
+        <row id="image-desc">
+          <separator orient="vertical"/>
+          <label value="&image-desc.label; "/>
+          <textbox readonly="true" id="image-desc-text"/>
+        </row>
+      </rows>
+    </grid>
+    <separator/>
+  </vbox>
+  <vbox id="insdel-sec">
+    <label value="&insdel-sec.label;"/>
+    <separator class="groove"/>
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows>
+        <row id="insdel-cite">
+          <separator orient="vertical"/>
+          <label value="&insdel-cite.label; "/>
+          <textbox readonly="true" id="insdel-cite-text"/>
+        </row>
+        <row id="insdel-date">
+          <separator orient="vertical"/>
+          <label value="&insdel-date.label; "/>
+          <textbox readonly="true" id="insdel-date-text"/>
+        </row>
+      </rows>
+    </grid>
+    <separator/>
+  </vbox>
+  <vbox id="quote-sec">
+    <label value="&quote-sec.label;"/>
+    <separator class="groove"/>
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows>
+        <row id="quote-cite">
+          <separator orient="vertical"/>
+          <label value="&quote-cite.label; "/>
+          <textbox readonly="true" id="quote-cite-text"/>
+        </row>
+      </rows>
+    </grid>
+    <separator/>
+  </vbox>
+  <vbox id="misc-sec">
+    <label value="&misc-sec.label;"/>
+    <separator class="groove"/>
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+        <column flex="1"/>
+      </columns>
+      <rows>
+        <row id="misc-lang">
+          <separator orient="vertical"/>
+          <label value="&misc-lang.label; "/>
+          <textbox readonly="true" id="misc-lang-text"/>
+        </row>
+        <row id="misc-title">
+          <separator orient="vertical"/>
+          <label value="&misc-title.label; "/>
+          <textbox readonly="true" id="misc-title-text"/>
+        </row>
+        <row id="misc-tblsummary">
+          <separator orient="vertical"/>
+          <label value="&misc-tblsummary.label; "/>
+          <textbox readonly="true" id="misc-tblsummary-text"/>
+        </row>
+      </rows>
+    </grid>
+    <separator/>
+  </vbox>
+</window>

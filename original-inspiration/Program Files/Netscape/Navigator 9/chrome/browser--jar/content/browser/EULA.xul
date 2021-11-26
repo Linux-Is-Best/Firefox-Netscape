@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE dialog [
+<!ENTITY % updateDTD SYSTEM "chrome://mozapps/locale/update/updates.dtd">
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%updateDTD;
+%brandDTD;
+]>
+
+<dialog id="eulaDialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&license.titleText;"
+        onload="gEULADialog.init();"
+        ondialogaccept="gEULADialog.accept()"
+        ondialogcancel="gEULADialog.cancel()"
+        buttondisabledaccept="true">
+
+  <script type="application/javascript"
+          src="chrome://browser/content/EULA.js"/>
+
+  <description>&license.introText;</description>
+
+  <separator class="thin"/>
+  
+  <description>&license.instructionText;</description>
+
+  <vbox id="EULAText" flex="1">
+    <iframe style="min-height: 30em; min-width: 105ex" id="EULATextFrame" type="content" flex="1" src=""/>
+  </vbox>
+
+  <separator class="thin"/>
+
+  <radiogroup id="acceptOrDecline"
+              oncommand="gEULADialog.onChangeRadio();">
+    <radio value="true" label="&license.accept;" accesskey="&license.accept.accesskey;"/>
+    <radio value="false" selected="true" label="&license.decline;" accesskey="&license.decline.accesskey;"/>
+  </radiogroup>
+
+  <separator class="thin"/>
+
+</dialog>

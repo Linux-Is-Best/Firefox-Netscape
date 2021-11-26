@@ -1,0 +1,62 @@
+<?xml version="1.0"?> <!-- -*- Mode: HTML -*- --> 
+
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?> 
+<?xml-stylesheet href="chrome://browser/content/browser.css" type="text/css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://browser/locale/setDesktopBackground.dtd">
+
+
+<dialog xmlns:html="http://www.w3.org/1999/xhtml"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        id="aboutDialog"
+        windowtype="Shell:SetDesktopBackground"
+        buttons="accept,cancel"
+        buttonlabelaccept="&setDesktopBackground.title;"
+        onload="gSetBackground.load();"
+        ondialogaccept="gSetBackground.setDesktopBackground();"
+        title="&setDesktopBackground.title;"
+        style="width: 30em;"> 
+    
+    <stringbundle id="backgroundBundle"
+                  src="chrome://browser/locale/shellservice.properties"/>
+    <script type="application/x-javascript"
+            src="chrome://browser/content/utilityOverlay.js"/>
+    <script type="application/x-javascript"
+            src="chrome://browser/content/setDesktopBackground.js"/>
+    <script type="application/x-javascript"
+            src="chrome://global/content/contentAreaUtils.js"/>
+
+    <hbox align="center" id="foo">
+      <label value="&position.label;"/>
+      <menulist id="menuPosition"
+                label="&position.label;" 
+                oncommand="gSetBackground.updatePosition(parseInt(this.value));">
+        <menupopup>
+          <menuitem label="&center.label;"  value="3"/>
+          <menuitem label="&tile.label;"    value="1"/>
+          <menuitem label="&stretch.label;" value="2"/>
+        </menupopup>
+      </menulist>
+      <spacer flex="1"/>
+      <label value="&color.label;"/>
+      <colorpicker id="desktopColor"
+                   type="button" 
+                   onchange="gSetBackground.updateColor(this.color);"/> 
+    </hbox>
+    <groupbox align="center">
+      <caption label="&preview.label;"/>
+      <stack>
+        <vbox id="monitor" align="center" pack="center"
+              style="width: 153px !important; height: 114px !important; overflow: hidden;"
+              left="13" top="18"/>
+        
+        <!-- XXXben - this needs to be skinable - on MacOSX we want to draw a
+             bucket, not a monitor -->
+        <image src="chrome://browser/content/monitor.png"/>
+      </stack>
+    </groupbox>
+    
+
+
+</dialog>

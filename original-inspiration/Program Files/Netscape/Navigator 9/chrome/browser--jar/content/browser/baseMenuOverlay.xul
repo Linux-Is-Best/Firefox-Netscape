@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % baseMenuOverlayDTD SYSTEM "chrome://browser/locale/baseMenuOverlay.dtd">
+%baseMenuOverlayDTD;
+]>
+<overlay id="baseMenuOverlay"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+<script type="application/x-javascript" src="chrome://browser/content/utilityOverlay.js"/>
+<script type="application/x-javascript" src="chrome://help/content/contextHelp.js"/>
+
+
+    <menu id="helpMenu"
+          label="&helpMenuWin.label;"
+          accesskey="&helpMenuWin.accesskey;">
+      <menupopup id="menu_HelpPopup" onpopupshowing="buildHelpMenu();">
+        <menuitem oncommand="openHelp('firefox-help', 'chrome://browser/locale/help/help.rdf');"
+                  label="&helpContents.label;"
+                  accesskey="&helpContents.accesskey;"
+                  key="key_openHelp"/>
+        <menuitem label="&helpForIEUsers.label;"
+                  accesskey="&helpForIEUsers.accesskey;"
+                  oncommand="openHelp('ieusers', 'chrome://browser/locale/help/help.rdf');"/>
+        <menuitem id="releaseNotes"
+                  accesskey="&helpReleaseNotes.accesskey;"
+                  label="&helpReleaseNotes.label;"
+                  oncommand="openReleaseNotes(event)"
+                  onclick="checkForMiddleClick(this, event);"/>
+<!--        <menuitem id="reportBugMenuitem" label="&reportBugCmd.label;" 
+                  accesskey="&reportBugCmd.accesskey;" 
+                  oncommand="openUILink('http://browser.netscape.com/support/#feedback', event);"
+                  onclick="checkForMiddleClick(this, event);"/>                    
+-->
+        <menuseparator id="aboutSeparator"/>       
+        <menuitem id="checkForUpdates"
+                  accesskey="&updateCmd.accesskey;"
+                  label="&updateCmd.label;"
+                  class="menuitem-iconic"
+                  oncommand="checkForUpdates();"/>
+        <menuseparator/>
+        <menuitem id="aboutName"
+                  accesskey="&aboutCmd.accesskey;"
+                  label="&aboutCmd.label;"
+                  oncommand="openAboutDialog();"/>
+      </menupopup>
+    </menu>
+
+    <keyset id="baseMenuKeyset">
+        <key id="key_openHelp"
+            oncommand="openHelp('firefox-help', 'chrome://browser/locale/help/help.rdf');"
+             keycode="&openHelp.commandkey;"/>
+    </keyset>
+
+    <stringbundleset id="stringbundleset">
+        <stringbundle id="bundle_browser" src="chrome://browser/locale/browser.properties"/>
+        <stringbundle id="bundle_browser_region" src="chrome://browser-region/locale/region.properties"/>
+    </stringbundleset>
+</overlay>

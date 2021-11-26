@@ -1,0 +1,35 @@
+<?xml version="1.0"?> 
+
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<!DOCTYPE dialog [
+  <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd" >
+  %brandDTD;
+  <!ENTITY % openDialogDTD SYSTEM "chrome://browser/locale/pageReport.dtd" >
+  %openDialogDTD;
+]>            
+ 
+<dialog id="pageReport"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&caption.label;"
+        onload="onLoad()"
+        style="width: 40em;"
+        buttons="accept"
+        persist="screenX screenY"
+        screenX="24" screenY="24">
+              
+  <script type="application/x-javascript" src="chrome://browser/content/pageReport.js"/>
+ 
+  <description>
+    &intro.label;
+  </description>
+  <listbox style="height:10em" id="siteBox" onselect="siteSelected();" flex="1"/>
+  <separator class="thin"/>
+  <hbox>
+    <button label="&unblock.label;" id="unblockButton" oncommand="whitelistSite();"
+      disabled="true" accesskey="&unblock.accesskey;" icon="yes"/>
+    <spacer flex="1"/>
+    <button dlgtype="accept" label="&done.label;" default="true" icon="close"
+      oncommand="window.close();" accesskey="&done.accesskey;"/>
+  </hbox>
+</dialog>
