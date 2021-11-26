@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE overlay [
+<!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+%brandDTD;
+<!ENTITY % tabsDTD SYSTEM "chrome://browser/locale/preferences/tabs.dtd">
+%tabsDTD;
+]>
+
+<overlay id="TabsPaneOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <prefpane id="paneTabs" helpTopic="prefs-tabs" helpURI="chrome://browser/locale/help/help.rdf" flex="1">
+
+    <preferences id="tabsPreferences">
+            
+      <!-- Open behavior preferences -->
+      <preference id="browser.bookmarks.open" name="browser.bookmarks.open" type="int"/>
+      <preference id="browser.search.openintab" name="browser.search.openintab" type="bool"/>
+      <preference id="browser.link.open_external" name="browser.link.open_external" type="int"/>
+      <preference id="browser.link.open_newwindow" name="browser.link.open_newwindow" type="int"/>
+      <preference id="extensions.netscape.linkpad.open" name="extensions.netscape.linkpad.open" type="int"/>
+      
+      <!-- Tabbed browsing preferences --> 
+      <preference id="browser.tabs.autoHide" name="browser.tabs.autoHide" type="bool" inverted="true"/>
+      <preference id="browser.tabs.closeButtons" name="browser.tabs.closeButtons" type="int"/>                               
+      <preference id="browser.tabs.loadOnNewTab" name="browser.tabs.loadOnNewTab" type="int"/>
+      <preference id="browser.tabs.loadBookmarksInBackground" name="browser.tabs.loadBookmarksInBackground" type="bool" inverted="true"/>
+      <preference id="browser.tabs.loadInBackground" name="browser.tabs.loadInBackground" type="bool" inverted="true"/>      
+      <preference id="browser.tabs.loadDivertedInBackground" name="browser.tabs.loadDivertedInBackground" type="bool" inverted="true"/>  
+                        
+      <!-- Message preferences -->    
+      <preference id="browser.tabs.warnOnClose" name="browser.tabs.warnOnClose" type="bool"/>
+      <preference id="browser.tabs.warnOnOpen"  name="browser.tabs.warnOnOpen" type="bool"/>
+    </preferences>
+    
+    <script type="application/x-javascript" src="chrome://browser/content/preferences/tabs.js"/>
+
+    <!-- Open behavior -->
+    <groupbox id="openBehavior">
+      <caption label="&openBehavior.caption;"/>
+      <grid>
+        <columns>
+          <column flex="1"/>
+          <column/>
+        </columns>
+        <rows>
+          <row align="center">
+            <label value="&openBehaviorBookmarks.label;" accesskey="&openBehaviorBookmarks.accesskey;" control="openBehaviorBookmarks"/>
+            <menulist id="openBehaviorBookmarks" preference="browser.bookmarks.open" onsynctopreference="return gTabsPane.writeBMTarget();">
+              <menupopup>      
+                <menuitem label="&openBehaviorActive.label;" value="1"/>
+                <menuitem label="&openBehaviorWindow.label;" value="2"/>
+                <menuitem label="&openBehaviorTab.label;" value="3"/>
+              </menupopup>             
+            </menulist>
+          </row>
+          <row align="center">
+            <label value="&openBehaviorSearch.label;" accesskey="&openBehaviorSearch.accesskey;" control="openBehaviorSearch"/>
+            <menulist id="openBehaviorSearch" preference="browser.search.openintab">
+              <menupopup>      
+                <menuitem label="&openBehaviorActive.label;" value="false"/>
+                <menuitem label="&openBehaviorTab.label;" value="true"/>
+              </menupopup>             
+            </menulist>
+          </row>
+          <row align="center">
+           <label value="&openBehaviorDiverted.label;" accesskey="&openBehaviorDiverted.accesskey;" control="openBehaviorDiverted"/>
+            <menulist id="openBehaviorDiverted" preference="browser.link.open_external" onsynctopreference="return gTabsPane.writeLinkTarget();">
+              <menupopup>      
+                <menuitem label="&openBehaviorActive.label;" value="1"/>
+                <menuitem label="&openBehaviorWindow.label;" value="2"/>
+                <menuitem label="&openBehaviorTab.label;" value="3"/>
+              </menupopup>             
+            </menulist>
+          </row>
+        </rows>
+      </grid>
+    </groupbox>
+                 
+    <!-- Tabbed browsing -->    
+    <groupbox id="tabbedBrowsing">
+      <caption label="&tabbedBrowsing.caption;"/>
+      <grid>
+        <columns>
+          <column flex="1"/>
+          <column/>
+        </columns>
+        <rows>
+          <row align="center">
+            <checkbox id="showTabBar" label="&showTabBar.label;" accesskey="&showTabBar.accesskey;" preference="browser.tabs.autoHide"/>                
+          </row>
+          <row align="center">      
+            <label value="&showCloseButton.label;" accesskey="&showCloseButton.accesskey;" controls="showCloseButton"/>
+           <menulist id="showCloseButton" preference="browser.tabs.closeButtons">
+              <menupopup>
+                <menuitem label="&showCloseButtonNone.label;" value="2"/>
+                <menuitem label="&showCloseButtonActive.label;" value="0"/>
+                <menuitem label="&showCloseButtonAll.label;" value="1"/>          
+              </menupopup>
+           </menulist>
+          </row>
+          <row align="center">
+            <label value="&loadOnNewTab.label;" accesskey="&loadOnNewTab.accesskey;" controls="loadOnNewTab"/>
+            <menulist id="loadOnNewTab" preference="browser.tabs.loadOnNewTab">
+              <menupopup>
+              <menuitem label="&loadOnNewTabBlank.label;" value="0"/>
+              <menuitem label="&loadOnNewTabHome.label;" value="1"/>
+              <menuitem label="&loadOnNewTabCurrent.label;" value="2"/>    
+              </menupopup>      
+            </menulist>
+          </row>
+        </rows>
+      </grid>                  
+      <separator class="thin"/>
+      <checkbox id="switchUI" label="&switchUI.label;" accesskey="&switchUI.accesskey;" preference="browser.tabs.loadBookmarksInBackground"/>       
+      <checkbox id="switchContent" label="&switchContent.label;" accesskey="&switchContent.accesskey;" preference="browser.tabs.loadInBackground"/>          
+      <checkbox id="switchDiverted" label="&switchDiverted.label;" accesskey="&switchDiverted.accesskey;" preference="browser.tabs.loadDivertedInBackground"/>                          
+    </groupbox>
+    
+    <!-- Warning messages -->
+    <groupbox id="warningMessages">
+      <caption label="&warningMessages.caption;"/>
+      <checkbox id="warnCloseMultiple" label="&warnCloseMultipleTabs.label;" accesskey="&warnCloseMultipleTabs.accesskey;" preference="browser.tabs.warnOnClose"/>
+      <checkbox id="warnOpenMany" label="&warnOpenManyTabs.label;" accesskey="&warnOpenManyTabs.accesskey;" preference="browser.tabs.warnOnOpen"/>      
+    </groupbox>
+
+  </prefpane>
+
+</overlay>

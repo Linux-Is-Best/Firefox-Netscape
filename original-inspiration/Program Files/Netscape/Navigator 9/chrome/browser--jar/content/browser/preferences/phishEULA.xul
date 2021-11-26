@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://browser/locale/preferences/phishEULA.dtd">
+
+<dialog id="phishDialog"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        title="&phishDlg.title;"
+        style="width: &phishDlg.width;; height: &phishDlg.height;;"
+        persist="screenX screenY width height"
+        onload="gPhishDialog.init();"
+        onunload="gPhishDialog.uninit();"
+        ondialogaccept="gPhishDialog.accept();"
+        buttonlabelaccept="&accept.label;"
+        buttonlabelcancel="&cancel.label;"
+        buttondisabledaccept="true">
+
+  <stringbundle id="bundle_phish"
+                src="chrome://browser/locale/preferences/preferences.properties"/>
+  <script type="application/javascript"
+          src="chrome://browser/content/preferences/phishEULA.js"/>
+
+  <description id="phishBefore"/>
+
+  <separator class="thin"/>
+
+  <vbox id="phishPolicy" flex="1">
+    <iframe id="phishPolicyFrame" type="content" flex="1" src=""/>
+  </vbox>
+
+  <separator class="thin"/>
+
+  <radiogroup id="acceptOrDecline"
+              oncommand="gPhishDialog.onchangeRadio();">
+    <radio value="true" label="&acceptToS.label;"/>
+    <radio value="false" selected="true" label="&declineToS.label;"/>
+  </radiogroup>
+
+  <separator class="thin"/>
+
+</dialog>

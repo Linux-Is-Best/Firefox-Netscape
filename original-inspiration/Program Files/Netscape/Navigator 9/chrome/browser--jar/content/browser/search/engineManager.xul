@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+<?xml-stylesheet href="chrome://browser/skin/engineManager.css"?>
+
+<!DOCTYPE dialog SYSTEM "chrome://browser/locale/engineManager.dtd">
+
+<dialog id="engineManager"
+        xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+        buttons="accept,cancel,extra2"
+        buttonlabelextra2="&restoreDefaults.label;"
+        buttonaccesskeyextra2="&restoreDefaults.accesskey;"
+        onload="gEngineManagerDialog.init();"
+        ondialogaccept="gEngineManagerDialog.onOK();"
+        ondialogcancel="gEngineManagerDialog.onCancel();"
+        ondialogextra2="gEngineManagerDialog.onRestoreDefaults();"
+        title="&engineManager.title;"
+        style="&engineManager.style;"
+        persist="screenX screenY"
+        windowtype="Browser:SearchManager">
+
+  <script type="application/x-javascript"
+          src="chrome://browser/content/search/engineManager.js"/>
+  <script type="application/x-javascript"
+          src="chrome://global/content/nsDragAndDrop.js"/>
+
+  <commandset id="engineManagerCommandSet">
+    <command id="cmd_remove"
+             oncommand="gEngineManagerDialog.remove();"
+             disabled="true"/>
+    <command id="cmd_moveup"
+             oncommand="gEngineManagerDialog.bump(1);"
+             disabled="true"/>
+    <command id="cmd_movedown"
+             oncommand="gEngineManagerDialog.bump(-1);"
+             disabled="true"/>
+    <command id="cmd_editalias"
+             oncommand="gEngineManagerDialog.editAlias();"
+             disabled="true"/>
+  </commandset>
+
+  <keyset id="engineManagerKeyset">
+    <key id="delete" keycode="VK_DELETE" command="cmd_remove"/>
+  </keyset>
+
+  <description>&engineManager.intro;</description>
+  <separator class="thin"/>
+  <hbox flex="1">
+    <tree id="engineList" flex="1" rows="10" hidecolumnpicker="true"
+          seltype="single" onselect="gEngineManagerDialog.onSelect();">
+      <treechildren id="engineChildren" flex="1"
+                    ondraggesture="nsDragAndDrop.startDrag(event, gDragObserver);"/>
+      <treecols>
+        <treecol id="engineName" flex="1" hideheader="true"/>
+      </treecols>
+    </tree>
+    <vbox>
+      <spacer flex="1"/>
+      <button id="up"
+              label="&up.label;"
+              accesskey="&up.accesskey;"
+              command="cmd_moveup"/>
+      <button id="dn"
+              label="&dn.label;"
+              accesskey="&dn.accesskey;"
+              command="cmd_movedown"/>
+      <spacer flex="1"/>
+      <button id="remove"
+              label="&remove.label;"
+              accesskey="&remove.accesskey;"
+              command="cmd_remove"/>
+    </vbox>
+  </hbox>
+  <hbox>
+    <checkbox id="enableSuggest"
+              label="&enableSuggest.label;"
+              accesskey="&enableSuggest.accesskey;"/>
+    <spacer flex="1"/>
+  </hbox>
+  <hbox>
+    <label id="addEngines" class="text-link" value="&addEngine.label;"
+           onclick="gEngineManagerDialog.loadAddEngines();"/>
+    <spacer flex="1"/>
+  </hbox>
+</dialog>

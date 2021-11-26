@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE overlay [
+  <!ENTITY % brandDTD SYSTEM "chrome://branding/locale/brand.dtd">
+  <!ENTITY % mainDTD SYSTEM "chrome://browser/locale/preferences/main.dtd">
+  %brandDTD;
+  %mainDTD;
+]>
+
+<overlay id="MainPaneOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+           
+  <prefpane id="paneMain" onpaneload="gMainPane.init();"
+            helpTopic="prefs-main" helpURI="chrome://browser/locale/help/help.rdf">
+
+    <script type="application/x-javascript" src="chrome://browser/content/preferences/main.js"/>
+
+    <preferences id="mainPreferences">
+      <!-- XXX Button preferences -->
+
+      <!-- Startup -->
+      <preference id="browser.startup.page"
+                  name="browser.startup.page"
+                  type="int"/>
+      <preference id="browser.startup.homepage"
+                  name="browser.startup.homepage"
+                  type="wstring"/>
+      <preference id="browser.startup.splashscreen"
+                  name="browser.startup.splashscreen"
+                  type="bool"/>
+
+      <preference id="pref.browser.homepage.disable_button.current_page"
+                  name="pref.browser.homepage.disable_button.current_page"
+                  type="bool"/>
+      <preference id="pref.browser.homepage.disable_button.bookmark_page"
+                  name="pref.browser.homepage.disable_button.bookmark_page"
+                  type="bool"/>
+
+      <!-- Downloads -->
+      <preference id="browser.download.manager.showWhenStarting"
+                  name="browser.download.manager.showWhenStarting"
+                  type="bool"
+                  onchange="gMainPane.showDownloadsWhenStartingPrefChanged();"/>
+      <preference id="browser.download.manager.closeWhenDone"
+                  name="browser.download.manager.closeWhenDone"
+                  type="bool"/>
+      <preference id="browser.download.useDownloadDir"
+                  name="browser.download.useDownloadDir"
+                  type="bool"/>
+      <preference id="browser.download.dir"
+                  name="browser.download.dir"
+                  type="file"
+                  onchange="gMainPane.readDownloadDirPref();"/>
+      <preference id="browser.download.downloadDir"       name="browser.download.downloadDir"       type="file"/>
+      <preference id="browser.download.folderList"        name="browser.download.folderList"        type="int"/>
+
+      <!-- SYSTEM DEFAULTS -->
+      <preference id="browser.shell.checkDefaultBrowser"
+                  name="browser.shell.checkDefaultBrowser"
+                  type="bool"/>
+
+      <preference id="pref.general.disable_button.default_browser"
+                  name="pref.general.disable_button.default_browser"
+                  type="bool"/>
+
+    </preferences>
+    
+    <stringbundle id="bundlePreferences" src="chrome://browser/locale/preferences/preferences.properties"/>
+    <stringbundle id="bundleShell" src="chrome://browser/locale/shellservice.properties"/>
+    <stringbundle id="bundleBrand" src="chrome://branding/locale/brand.properties"/>
+
+    <!-- Startup -->
+    <groupbox id="startupGroup">
+      <caption label="&startup.label;"/>
+
+      <hbox align="center">
+        <label value="&startupPage.label;" accesskey="&startupPage.accesskey;"
+               control="browserStartupPage"/>
+        <menulist id="browserStartupPage" preference="browser.startup.page">
+          <menupopup>
+            <menuitem label="&startupHomePage.label;"     value="1"/>
+            <menuitem label="&startupBlankPage.label;"    value="0"/>
+            <menuitem label="&startupLastSession.label;"  value="3"/>
+          </menupopup>
+        </menulist>
+      </hbox>
+      <separator class="thin"/>
+      <hbox align="center">
+        <label value="&location.label;" accesskey="&location.accesskey;" control="browserHomePage"/>
+        <textbox id="browserHomePage" class="padded" flex="1"
+                 type="autocomplete" autocompletesearch="history"
+                 preference="browser.startup.homepage"/>
+      </hbox>
+      <hbox align="center" pack="end">
+        <button label="" accesskey="&useCurrentPage.accesskey;"
+                label1="&useCurrentPage.label;"
+                label2="&useMultiple.label;"
+                oncommand="gMainPane.setHomePageToCurrent();"
+                id="useCurrent"
+                preference="pref.browser.homepage.disable_button.current_page"/>
+        <button label="&useBookmark.label;" accesskey="&useBookmark.accesskey;"
+                oncommand="gMainPane.setHomePageToBookmark();"
+                id="useBookmark"
+                preference="pref.browser.homepage.disable_button.bookmark_page"/>
+        <button label="&restoreDefault.label;" accesskey="&restoreDefault.accesskey;"
+                oncommand="gMainPane.restoreDefaultHomePage();"
+                id="restoreDefaultHomePage"/>
+      </hbox>
+      <separator class="thin"/>
+      <hbox align="center">
+         <checkbox id="showSplashScreen" label="&showSplashScreen.label;"
+                   accesskey="&showSplashScreen.accesskey;"
+                   preference="browser.startup.splashscreen" />
+      </hbox>
+
+    </groupbox>
+
+    <!-- Downloads -->
+    <groupbox id="downloadsGroup">
+      <caption label="&downloads.label;"/>
+
+      <checkbox id="showWhenDownloading" label="&showWhenDownloading.label;"
+                accesskey="&showWhenDownloading.accesskey;"
+                preference="browser.download.manager.showWhenStarting"
+                onsyncfrompreference="return gMainPane.readShowDownloadsWhenStarting();"/>
+      <checkbox id="closeWhenDone" label="&closeWhenDone.label;"
+                accesskey="&closeWhenDone.accesskey;" class="indent"
+                preference="browser.download.manager.closeWhenDone"/>
+
+      <separator/>
+
+      <radiogroup id="saveWhere"
+                  preference="browser.download.useDownloadDir"
+                  onsyncfrompreference="return gMainPane.readUseDownloadDir();">
+        <hbox id="saveToRow">
+          <radio id="saveTo" value="true"
+                 label="&saveTo.label;"
+                 accesskey="&saveTo.accesskey;"
+                 xmlns:aaa="http://www.w3.org/2005/07/aaa"
+                 aaa:labelledby="saveTo downloadFolder"/>
+          <filefield id="downloadFolder" flex="1"
+                     preference="browser.download.folderList"
+                     preference-editable="true"
+                     onsyncfrompreference="return gMainPane.readDownloadDirPref();"
+                     onsynctopreference="return gMainPane.writeFolderList()"/>
+          <button id="chooseFolder" oncommand="gMainPane.chooseFolder();"
+                  accesskey="&chooseFolderWin.accesskey;"
+                  label="&chooseFolderWin.label;"
+                  preference="browser.download.folderList"
+                  onsynctopreference="return gMainPane.writeFolderList();"/>
+        </hbox>
+        <radio id="alwaysAsk" value="false"
+               label="&alwaysAsk.label;"
+               accesskey="&alwaysAsk.accesskey;"/>
+      </radiogroup>
+    </groupbox>
+
+    <!-- System Defaults -->
+    <groupbox id="systemDefaultsGroup" orient="horizontal">
+      <caption label="&systemDefaults.label;"/>
+
+      <hbox id="checkDefaultBox" align="center" flex="1">      
+        <checkbox id="alwaysCheckDefault" preference="browser.shell.checkDefaultBrowser"
+                  label="&alwaysCheckDefault.label;" accesskey="&alwaysCheckDefault.accesskey;"
+                  flex="1" style="height: &alwaysCheckDefault.height;"/>
+        <button id="checkDefaultButton"
+                label="&checkNow.label;" accesskey="&checkNow.accesskey;"
+                oncommand="gMainPane.checkNow()"
+                preference="pref.general.disable_button.default_browser"/>
+      </hbox>
+    </groupbox>
+
+  </prefpane>
+
+</overlay>

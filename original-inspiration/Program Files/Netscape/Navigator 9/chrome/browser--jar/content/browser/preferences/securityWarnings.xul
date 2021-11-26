@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE prefwindow SYSTEM "chrome://browser/locale/preferences/securityWarnings.dtd">
+
+<?xml-stylesheet href="chrome://global/skin/"?>
+
+<prefwindow id="SecurityWarnings" type="child"
+            xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+            title="&securityWarnings.title;"
+            dlgbuttons="accept,cancel">
+
+  <prefpane id="SecurityWarningsPane">
+    <preferences>
+      <preference id="security.warn_entering_secure"
+                  name="security.warn_entering_secure"
+                  type="bool"/>
+      <preference id="security.warn_entering_secure.show_once"
+                  name="security.warn_entering_secure.show_once"
+                  type="bool"/>
+      <preference id="security.warn_entering_weak"
+                  name="security.warn_entering_weak"
+                  type="bool"/>
+      <preference id="security.warn_entering_weak.show_once"
+                  name="security.warn_entering_weak.show_once"
+                  type="bool"/>
+      <preference id="security.warn_leaving_secure"
+                  name="security.warn_leaving_secure"
+                  type="bool"/>
+      <preference id="security.warn_leaving_secure.show_once"
+                  name="security.warn_leaving_secure.show_once"
+                  type="bool"/>
+      <preference id="security.warn_submit_insecure"
+                  name="security.warn_submit_insecure"
+                  type="bool"/>
+      <preference id="security.warn_submit_insecure.show_once"
+                  name="security.warn_submit_insecure.show_once"
+                  type="bool"/>
+      <preference id="security.warn_viewing_mixed"
+                  name="security.warn_viewing_mixed"
+                  type="bool"/>
+      <preference id="security.warn_viewing_mixed.show_once"
+                  name="security.warn_viewing_mixed.show_once"
+                  type="bool"/>
+    </preferences>
+    
+    <script type="application/x-javascript" src="chrome://browser/content/preferences/securityWarnings.js"/>
+
+    <description value="&security.warn_when;"/>
+    <vbox class="indent">
+      <checkbox id="warn_entering_secure"
+                onsynctopreference="secWarningSyncTo(event);"
+                label="&security.warn_entering_secure.label;"
+                accesskey="&security.warn_entering_secure.accesskey;"
+                preference="security.warn_entering_secure"/>
+      <checkbox id="warn_entering_weak"
+                onsynctopreference="secWarningSyncTo(event);"
+                label="&security.warn_entering_weak.label;"
+                accesskey="&security.warn_entering_weak.accesskey;"
+                preference="security.warn_entering_weak"/>
+      <checkbox id="warn_leaving_secure"
+                onsynctopreference="secWarningSyncTo(event);"
+                label="&security.warn_leaving_secure.label;"
+                accesskey="&security.warn_leaving_secure.accesskey;"
+                preference="security.warn_leaving_secure"/>
+      <checkbox id="warn_submit_insecure"
+                onsynctopreference="secWarningSyncTo(event);"
+                label="&security.warn_submit_insecure.label;"
+                accesskey="&security.warn_submit_insecure.accesskey;"
+                preference="security.warn_submit_insecure"/>
+      <checkbox id="warn_viewing_mixed"
+                onsynctopreference="secWarningSyncTo(event);"
+                label="&security.warn_viewing_mixed.label;"
+                accesskey="&security.warn_viewing_mixed.accesskey;"
+                preference="security.warn_viewing_mixed"/>
+    </vbox>
+  </prefpane>
+</prefwindow>
