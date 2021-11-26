@@ -1,0 +1,287 @@
+Netscape Navigator Installation Started: 2021-11-26 12:21:54
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Installation Details
+-------------------------------------------------------------------------------
+  Install Dir: C:\Program Files (x86)\Netscape\Navigator 9
+  Locale     : en-US
+  App Version: 9.0.0.6
+  GRE Version: 1.8.1.12
+
+-------------------------------------------------------------------------------
+Removing Obsolete Files and Directories
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Installing Main Files
+-------------------------------------------------------------------------------
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\AccessibleMarshal.dll
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\chrome
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\components
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\defaults
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\freebl3.chk
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\freebl3.dll
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\greprefs
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\js3250.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\LICENSE
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\msvcp71.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\msvcr71.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\navigator.exe
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\nspr4.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\nss3.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\nssckbi.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\plc4.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\plds4.dll
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\plugins
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\README.txt
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\res
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\smime3.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\softokn3.chk
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\softokn3.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\ssl3.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\updater.exe
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\xpcom.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\xpcom_compat.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\xpcom_core.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\xpicleanup.exe
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\xpistub.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\arrow.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\arrowd.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\broken-image.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\charsetalias.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\charsetData.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\cmessage.txt
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\res\dtd
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\EditorOverride.css
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\forms.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\grabber.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\hiddenWindow.html
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\res\html
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\langGroups.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\language.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\loading-image.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\mathml.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\quirk.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\svg.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-after-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-after-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-after.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-before-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-before-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-column-before.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-after-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-after-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-after.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-before-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-before-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-add-row-before.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-column-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-column-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-column.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-row-active.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-row-hover.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\table-remove-row.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\ua.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\viewsource.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\wincharset.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-audio.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-binary.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-find.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-image.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-menu.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-movie.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-sound.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-telnet.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-text.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\html\gopher-unknown.gif
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\fontEncoding.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\fontNameMap.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfont.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontCMEX10.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontCMSY10.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontMath1.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontMath2.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontMath4.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontMTExtra.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontPUA.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\fonts\mathfontSymbol.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\html40Latin1.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\html40Special.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\html40Symbols.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\htmlEntityVersions.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\mathml20.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\entityTables\transliterate.properties
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\dtd\mathml.dtd
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\res\dtd\xhtml11.dtd
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\plugins\npnul32.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\greprefs\all.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\greprefs\security-prefs.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\greprefs\xpinstall.js
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netstripe@netscape.com
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netstripe@netscape.com\install.rdf
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com\chrome
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com\chrome.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com\install.rdf
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com\chrome\ns9migrator-en-US.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\netscape9migrator@flock.com\chrome\ns9migrator.jar
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\defaults\autoconfig
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\defaults\pref
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\pref\channel-prefs.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\pref\firefox-branding.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\pref\firefox.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\autoconfig\platform.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\autoconfig\prefcalls.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\browser.xpt
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\cache-module.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\FeedConverter.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\FeedProcessor.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\FeedWriter.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\jar50.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\jsconsole-clhandler.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\jsd3250.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\linkpad-module.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\myspell.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsBookmarkTransactionManager.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsBrowserContentHandler.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsBrowserGlue.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsCloseAllWindows.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsDefaultCLH.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsDictionary.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsExtensionManager.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsHelperAppDlg.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsMicrosummaryService.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsPostUpdateWin.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsProxyAutoConfig.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSafebrowsingApplication.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSearchService.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSearchSuggestions.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSessionStartup.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSessionStore.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSetDefaultBrowser.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsSidebar.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsUpdateService.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsUrlClassifierLib.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsUrlClassifierListManager.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsUrlClassifierTable.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsURLFormatter.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\nsXmlRpcClient.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\spellchk.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\splash.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\WebContentConverter.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\components\xpinstal.dll
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\browser.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\browser.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\classic.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\classic.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\comm.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\comm.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\pippki.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\pippki.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\reporter.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\reporter.manifest
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\toolkit.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\toolkit.manifest
+
+-------------------------------------------------------------------------------
+DLL Registration
+-------------------------------------------------------------------------------
+  Registered: C:\Program Files (x86)\Netscape\Navigator 9\AccessibleMarshal.dll
+
+-------------------------------------------------------------------------------
+Installing Localized Files
+-------------------------------------------------------------------------------
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\browserconfig.properties
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\dictionaries
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\old-homepage-default.properties
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\updater.ini
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\uninstall\helper.exe
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\amazondotcom.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\aol.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\ask.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\eBay.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\google.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\netscape.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\searchplugins\yahoo.xml
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\dictionaries\en-US.aff
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\dictionaries\en-US.dic
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\bookmarks.html
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\chrome
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\localstore.rdf
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\mimeTypes.rdf
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\prefs.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\search.rdf
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\chrome\userChrome-example.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\profile\chrome\userContent-example.css
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\defaults\pref\firefox-l10n.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\en-US.jar
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\chrome\en-US.manifest
+
+-------------------------------------------------------------------------------
+Adding Additional Files
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Adding Registry Entries
+-------------------------------------------------------------------------------
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Main | Install Directory | C:\Program Files (x86)\Netscape\Navigator 9
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Main | PathToExe | C:\Program Files (x86)\Netscape\Navigator 9\navigator.exe
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Main | Program Folder Path | C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Netscape Navigator
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Uninstall | Uninstall Log Folder | C:\Program Files (x86)\Netscape\Navigator 9\uninstall
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Uninstall | Description | Netscape Navigator (9.0.0.6)
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US) |  | 9.0.0.6 (en-US)
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator 9.0.0.6\bin | PathToExe | C:\Program Files (x86)\Netscape\Navigator 9\navigator.exe
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator 9.0.0.6\extensions | Components | C:\Program Files (x86)\Netscape\Navigator 9\components
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator 9.0.0.6\extensions | Plugins | C:\Program Files (x86)\Netscape\Navigator 9\plugins
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator 9.0.0.6 | GeckoVer | 1.8.1.12
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator |  | 1.8.1.12
+  Added Registry String: HKLM | Software\Mozilla\Netscape Navigator | CurrentVersion | 9.0.0.6 (en-US)
+  Added Registry DWord: HKLM | Software\Mozilla\Netscape Navigator\9.0.0.6 (en-US)\Uninstall | Create Start Menu Shortcut | 1
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | Comments | Netscape Navigator
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | DisplayIcon | C:\Program Files (x86)\Netscape\Navigator 9\navigator.exe,0
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | DisplayName | Netscape Navigator (9.0.0.6)
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | DisplayVersion | 9.0.0.6 (en-US)
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | InstallLocation | C:\Program Files (x86)\Netscape\Navigator 9
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | Publisher | Netscape
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | UninstallString | C:\Program Files (x86)\Netscape\Navigator 9\uninstall\helper.exe
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | URLInfoAbout | http://browser.netscape.com/
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | URLUpdateInfo | http://browser.netscape.com/
+  Added Registry DWord: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | NoModify | 1
+  Added Registry DWord: HKLM | Software\Microsoft\Windows\CurrentVersion\Uninstall\Netscape Navigator (9.0.0.6) | NoRepair | 1
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\App Paths\navigator.exe |  | C:\Program Files (x86)\Netscape\Navigator 9\navigator.exe
+  Added Registry String: HKLM | Software\Microsoft\Windows\CurrentVersion\App Paths\navigator.exe | Path | C:\Program Files (x86)\Netscape\Navigator 9
+  Added Registry Key: HKLM | Software\Microsoft\MediaPlayer\ShimInclusionList\NAVIGATOR.EXE
+
+-------------------------------------------------------------------------------
+Adding Shortcuts
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Updating Quick Launch Shortcuts
+-------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------
+Installing Developer Tools
+-------------------------------------------------------------------------------
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome.manifest
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\components
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\defaults
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\install.rdf
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\defaults\preferences
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\defaults\preferences\inspector.js
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\components\inspector-cmdline.js
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome\icons
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome\inspector.jar
+  Created Directory: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome\icons\default
+  Installed File: C:\Program Files (x86)\Netscape\Navigator 9\extensions\inspector@mozilla.org\chrome\icons\default\winInspectorMain.ico
+
+-------------------------------------------------------------------------------
+Netscape Navigator Installation Finished: 2021-11-26 12:22:04
