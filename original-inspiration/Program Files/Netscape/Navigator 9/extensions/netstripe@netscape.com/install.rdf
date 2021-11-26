@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>netstripe@netscape.com</em:id>
+    <em:version>1.0</em:version>
+    
+    <em:targetApplication>
+      <Description>
+        <em:id>{3db10fab-e461-4c80-8b97-957ad5f8ea47}</em:id>
+        <em:minVersion>9.0.0.6</em:minVersion>
+        <em:maxVersion>9.0.0.6</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+    
+    <!-- Front End MetaData -->
+    <em:name>Netscape (default)</em:name>
+    <em:description>The default theme</em:description>
+    
+    <!-- EXTENSION AUTHORS!
+         DO NOT COPY THIS PROPERTY INTO YOUR INSTALL RDF FILES
+         It will cause users not to be informed of incompatibilities 
+         with your extension when they are updated with Software Update
+         and your extension will become unavailable to them!
+         -->
+    <em:appManaged>true</em:appManaged>
+
+    <em:locked>true</em:locked>
+
+    <!-- Front End Integration Hooks (used by Theme Manager)-->
+    <!-- XXXben - preprocess this file to use different info for mac version -->
+    <em:creator>Andy Fraley</em:creator>
+
+    <em:internalName>classic/1.0</em:internalName>
+  </Description>      
+
+</RDF>

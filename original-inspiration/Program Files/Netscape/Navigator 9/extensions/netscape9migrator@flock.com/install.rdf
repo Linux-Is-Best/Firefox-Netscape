@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+
+    <em:id>netscape9migrator@flock.com</em:id>
+    <em:name>Netscape 9 Migrator</em:name>
+    <em:version>1.2</em:version>
+    <em:description>An extension for automatically migrating Netscape 9.0 to Flock or Firefox.</em:description>
+    <em:creator>Flock, Inc</em:creator>
+    <em:appManaged>true</em:appManaged>
+
+    <em:homepageURL>http://www.flock.com</em:homepageURL>
+
+    <em:targetApplication>
+      <Description>
+        <em:id>{3db10fab-e461-4c80-8b97-957ad5f8ea47}</em:id>
+        <em:minVersion>9.0.0.0</em:minVersion>
+        <em:maxVersion>9.0.0.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+
+</RDF>

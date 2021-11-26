@@ -1,0 +1,4 @@
+overlay  chrome://browser/content/browser.xul chrome://ns9migrator/content/overlay.xul
+skin  ns9migrator classic/1.0  jar:chrome/ns9migrator.jar!/skin/classic/ns9migrator/
+content  ns9migrator jar:chrome/ns9migrator.jar!/content/ns9migrator/  xpcnativewrappers=no
+locale  ns9migrator  en-US  jar:chrome/ns9migrator-en-US.jar!/locale/en-US/ns9migrator/
