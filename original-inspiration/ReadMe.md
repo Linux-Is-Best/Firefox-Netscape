@@ -2,4 +2,4 @@ This is a copy of the original Netscape Navigator 9.0.6 (for windows). Unfortuna
 
 Yahoo and AOL (America Online) owns the rights and trademarks. 
 I include it only as a reference point for inspiration when developing any styles, themes, or other modifications designed for Mozilla Firefox. 
-It comes with no warranty or guarantee of functionality. AOL and its respected partners retain all rights. 
+It comes with no warranty or guarantee of functionality. Yahoo and AOL and its respected partners retain all rights. 
