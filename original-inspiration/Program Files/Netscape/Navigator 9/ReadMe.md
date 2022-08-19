@@ -7,4 +7,4 @@ Netscape and Netscape Navigator belong to Yahoo and AOL (America Online), which 
 This copy of Netscape Navigator is being included in this repo only for reference purposes. 
 The development aims to style Mozilla Firefox to look similar to classic Netscape Navigator 9.0.6. 
 Therefore, this reference copy of Netscape Navigator will not be included in any current or future release. 
-Furthermore, it comes with no warranty or guarantee of functionality. America Online (AOL) and their respected partners retain all rights.
+Furthermore, it comes with no warranty or guarantee of functionality. Yahoo and America Online (AOL) and their respected partners retain all rights.
